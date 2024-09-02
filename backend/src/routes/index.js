@@ -9,4 +9,6 @@ router.use(`/api/v${config.apiVersion}/auth`, require('../routes/auth'));
 
 router.use(`/api/v${config.apiVersion}/user`, require('../routes/user'));
 
+router.use(`/api/v${config.apiVersion}/crypto`, require('../routes/crypto'));
+
 module.exports = router;

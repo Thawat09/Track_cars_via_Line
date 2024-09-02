@@ -8,4 +8,6 @@ module.exports = {
   pgsql_user: process.env.PGSQL_USER,
   pgsql_pass: process.env.PGSQL_PASS,
   pgsql_db: process.env.PGSQL_DB,
+
+  secret_key_data: process.env.SECRET_KEY_DATA
 };

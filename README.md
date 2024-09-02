@@ -11,3 +11,4 @@ Track cars via Line
 6. npm install express-rate-limit
 7. npm install morgan winston
 8. npm install body-parser
+9. npm install crypto-js
