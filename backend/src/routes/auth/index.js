@@ -2,7 +2,9 @@ const express = require('express');
 const passport = require('passport');
 const router = express.Router();
 
-router.get('/login', passport.authenticate('line'));
+router.get('/login', (req, res) => {
+  res.send('Welcome to the LINE login system');
+});
 
 router.get('/callback', passport.authenticate('line', {
   successRedirect: '/dashboard',
