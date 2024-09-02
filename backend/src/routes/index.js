@@ -7,4 +7,6 @@ router.get(['/', `/api/${config.apiVersion}/`], (req, res) => {
 
 router.use(`/api/v${config.apiVersion}/auth`, require('../routes/auth'));
 
+router.use(`/api/v${config.apiVersion}/user`, require('../routes/user'));
+
 module.exports = router;

@@ -1,12 +1,15 @@
-require('dotenv').config();
 const express = require('express');
 const rateLimit = require('express-rate-limit');
-const { morganMiddleware } = require('./src/config/logger');
+const { morganMiddleware } = require('./src/helpers/logger.helper');
 
 const app = express();
 
 // ใช้ morganMiddleware ก่อนการตั้งค่า rateLimiter
 app.use(morganMiddleware);
+
+// ใช้ body parsers
+app.use(express.json()); // สำหรับการรับข้อมูล JSON
+app.use(express.urlencoded({ extended: true })); // สำหรับการรับข้อมูลจากฟอร์ม
 
 // ตั้งค่า rate limiter
 const limiter = rateLimit({
