@@ -1,5 +1,5 @@
-const returnHelper = require("../../helpers/return.helper");
-const cryptoHelper = require("../../helpers/crypto.helper");
+const returnHelper = require("../../helpers/return/return.helper");
+const cryptoHelper = require("../../helpers/crypto/crypto.helper");
 
 exports.encryptedData = async (req, res) => {
     try {

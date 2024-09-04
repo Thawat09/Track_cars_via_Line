@@ -1,6 +1,7 @@
 const express = require('express');
 const rateLimit = require('express-rate-limit');
-const { morganMiddleware } = require('./src/helpers/logger.helper');
+const { morganMiddleware } = require('./src/helpers/logger/logger.helper');
+const config = require("./src/config/app");
 
 const app = express();
 
@@ -23,6 +24,6 @@ app.use(limiter);
 // การตั้งค่า routing
 app.use('/', require('./src/routes'));
 
-app.listen(3000, () => {
-    console.log('Server started on http://localhost:3000');
+app.listen(config.port, () => {
+    console.log(`Server started on http://localhost:${config.port}`);
 });
