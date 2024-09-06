@@ -1,31 +1,26 @@
 // _variables.scss
-// 
-// Template's variables for colors, font weight and... .
-// 
-
-
 // Base Colors
-$color-primary: #1890FF;
-$color-secondary: #B37FEB;
-$color-success: #52C41A;
-$color-warning: #FADB14;
-$color-danger: #F5222D;
+$color-primary: #1890ff;
+$color-secondary: #b37feb;
+$color-success: #52c41a;
+$color-warning: #fadb14;
+$color-danger: #f5222d;
 $color-dark: #141414;
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 // / Base Colors
 
 // Neutral Colors
-$color-gray-1: #FFFFFF;
-$color-gray-2: #FAFAFA;
-$color-gray-3: #F5F5F5;
-$color-gray-4: #F0F0F0;
-$color-gray-5: #D9D9D9;
-$color-gray-6: #BFBFBF;
-$color-gray-7: #8C8C8C;
+$color-gray-1: #ffffff;
+$color-gray-2: #fafafa;
+$color-gray-3: #f5f5f5;
+$color-gray-4: #f0f0f0;
+$color-gray-5: #d9d9d9;
+$color-gray-6: #bfbfbf;
+$color-gray-7: #8c8c8c;
 $color-gray-8: #595959;
 $color-gray-9: #434343;
 $color-gray-10: #262626;
-$color-gray-11: #1F1F1F;
+$color-gray-11: #1f1f1f;
 $color-gray-12: #141414;
 $color-muted: $color-gray-7;
 // / Neutral Colors
@@ -41,12 +36,12 @@ $f-family: "open sans", Helvetica, Arial, sans-serif;
 // / Font Family
 
 // Responsive Breakpoints
-$xs: 480px ;
-$sm: 576px ;
-$md: 768px ;
-$lg: 992px ;
-$xl: 1200px ;
-$xxl: 1600px ;
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
 // / Responsive Breakpoints
 
 // Ant Design Vars
@@ -79,4 +74,3 @@ $shadow-3: 0px 5px 10px rgba(0, 0, 0, 0.12);
 
 $submenu-links-p: 10px 16px;
 // / Template Vars
-
