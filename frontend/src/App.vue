@@ -1,55 +1,31 @@
-<script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
-</script>
+<!-- 
+	This is the main page of the application, the layout component is used here,
+	and the router-view is passed to it.
+	Layout component is dynamically declared based on the layout for each route,
+	specified in routes list router/index.js .
+ -->
 
 <template>
-  <div>
-    <header>
-      <img
-        alt="Vue logo"
-        class="logo"
-        src="./assets/logo.svg"
-        width="125"
-        height="125"
-      />
-
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
-      </div>
-    </header>
-
-    <main>
-      <TheWelcome />
-    </main>
-  </div>
+	<div id="app">
+		<component :is="layout">
+			<router-view />
+		</component>
+	</div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+	export default ({
+		computed: {
+			// Sets components name based on current route's specified layout, defaults to
+			// <layout-default></layout-default> component.
+			layout() {
+				return "layout-" + ( this.$route.meta.layout || "default" ).toLowerCase() ;
+			}
+		},
+	})
+	
+</script>
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+<style lang="scss">
 </style>

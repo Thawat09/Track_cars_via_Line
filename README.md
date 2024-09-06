@@ -16,8 +16,10 @@ Track cars via Line
 11. npm install bcrypt
 
 
-# Frontend
+<!-- # Frontend
 1. npm create vue@latest
 2. npm install
 3. npm install axios
 4. npm install --save @line/liff
+5. npm install primevue @primevue/themes primeicons primeflex
+6. npm install tailwindcss-primeui -->
