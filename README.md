@@ -14,3 +14,10 @@ Track cars via Line
 9. npm install crypto-js
 10. npm install sequelize sqlite3
 11. npm install bcrypt
+
+
+# Frontend
+1. npm create vue@latest
+2. npm install
+3. npm install axios
+4. npm install --save @line/liff
