@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const authController = require('../../controller/auth/auth.controller');
 
-router.get('/login', (req, res) => {
-  res.send('Welcome to the LINE login system');
-});
+router.post('/login', authController.login);
 
 module.exports = router;

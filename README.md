@@ -14,6 +14,7 @@ Track cars via Line
 9. npm install crypto-js
 10. npm install sequelize sqlite3
 11. npm install bcrypt
+12. npm install jsonwebtoken
 
 
 <!-- # Frontend
