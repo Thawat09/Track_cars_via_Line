@@ -1,12 +1,10 @@
-module.exports = {
-	runtimeCompiler: true,
+const { defineConfig } = require('@vue/cli-service')
 
-	chainWebpack: config => {
-		config
-			.plugin('html')
-			.tap(args => {
-				args[0].title = 'Muse Vue Ant Design - by Creative Tim'
-				return args
-			})
-	}
-}
+module.exports = defineConfig({
+  transpileDependencies: true,
+  devServer: {
+    allowedHosts: 'all',
+    https: false,
+    webSocketServer: false,
+  },
+})
