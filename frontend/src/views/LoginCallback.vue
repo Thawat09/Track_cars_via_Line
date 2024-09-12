@@ -42,11 +42,10 @@ export default {
         );
 
         const data = response.data;
-        console.log(data);
 
-        if (data.token) {
+        if (data.accessToken) {
           // เก็บ token ใน localStorage
-          localStorage.setItem("jwt_token", data.token);
+          localStorage.setItem("jwt_token", data.accessToken);
           this.$router.push("/about"); // เปลี่ยนเส้นทางไปยังหน้า profile
         } else {
           this.error = "Login failed";

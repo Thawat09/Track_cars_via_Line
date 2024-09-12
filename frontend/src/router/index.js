@@ -10,17 +10,11 @@ const routes = [
   {
     path: '/callback',
     name: 'callback',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LoginCallback.vue')
+    component: () => import(/* webpackChunkName: "callback" */ '../views/LoginCallback.vue')
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }
 ]
@@ -30,4 +24,27 @@ const router = createRouter({
   routes
 })
 
-export default router
+// Global navigation guard
+router.beforeEach((to, from, next) => {
+  if (to.name === 'home') {
+    return next();
+  }
+
+  if (to.name === 'callback') {
+    return next();
+  }
+
+  const token = localStorage.getItem('jwt_token');
+
+  if (!token) {
+    return next({ name: 'home' });
+  }
+
+  if (token) {
+    return next();
+  } else {
+    return next({ name: 'home' });
+  }
+});
+
+export default router;
